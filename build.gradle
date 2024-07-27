@@ -7,6 +7,7 @@ group = 'io.github.paulem.btm'
 version = '2.6.4'
 
 repositories {
+    maven { url = "https://repo.jeff-media.com/public/" }
     mavenCentral()
 
     maven {
@@ -22,6 +23,10 @@ repositories {
     maven { url = 'https://oss.sonatype.org/content/repositories/central' }
 
     mavenLocal()
+
+    // Add JitPack repository
+    maven { url 'https://jitpack.io' }
+
 }
 
 dependencies {
@@ -35,10 +40,6 @@ dependencies {
     compileOnly 'org.jetbrains:annotations:24.+'
     compileOnly 'org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT'
 }
-
-/*java {
-    withSourcesJar()
-}*/
 
 compileJava {
     options.encoding = "UTF-8"
